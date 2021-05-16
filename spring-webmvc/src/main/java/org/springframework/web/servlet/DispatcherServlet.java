@@ -49,6 +49,7 @@ import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.springframework.core.log.LogFormatUtils;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.server.RequestPath;
 import org.springframework.http.server.ServletServerHttpRequest;
 import org.springframework.lang.Nullable;
@@ -968,7 +969,9 @@ public class DispatcherServlet extends FrameworkServlet {
 					restoreAttributesAfterInclude(request, attributesSnapshot);
 				}
 			}
-			ServletRequestPathUtils.setParsedRequestPath(previousRequestPath, request);
+			if (this.parseRequestPath) {
+				ServletRequestPathUtils.setParsedRequestPath(previousRequestPath, request);
+			}
 		}
 	}
 
@@ -1044,8 +1047,8 @@ public class DispatcherServlet extends FrameworkServlet {
 
 				// Process last-modified header, if supported by the handler.
 				String method = request.getMethod();
-				boolean isGet = "GET".equals(method);
-				if (isGet || "HEAD".equals(method)) {
+				boolean isGet = HttpMethod.GET.matches(method);
+				if (isGet || HttpMethod.HEAD.matches(method)) {
 					long lastModified = ha.getLastModified(request, mappedHandler.getHandler());
 					if (new ServletWebRequest(request, response).checkNotModified(lastModified) && isGet) {
 						return;
