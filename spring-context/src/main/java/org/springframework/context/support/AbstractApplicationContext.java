@@ -94,6 +94,9 @@ import org.springframework.util.ReflectionUtils;
  * implements common context functionality. Uses the Template Method design pattern,
  * requiring concrete subclasses to implement abstract methods.
  *
+ * ApplicationContext接口的抽象实现。未限制用于配置的存储类型；只实现了通用的上下文功能。使用模板方法设计模式，
+ * 需要具体的子类来实现抽象方法。
+ *
  * <p>In contrast to a plain BeanFactory, an ApplicationContext is supposed
  * to detect special beans defined in its internal bean factory:
  * Therefore, this class automatically registers
@@ -101,6 +104,9 @@ import org.springframework.util.ReflectionUtils;
  * {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessors},
  * and {@link org.springframework.context.ApplicationListener ApplicationListeners}
  * which are defined as beans in the context.
+ *
+ * 与BeanFactory相比，ApplicationContext支持检测定义在内部bean工厂中的特殊bean。因此，该类会自动注册BeanFactoryPostProcessors，
+ * BeanPostProcessors，ApplicationListeners，它们都被定义为上下文中的bean。
  *
  * <p>A {@link org.springframework.context.MessageSource} may also be supplied
  * as a bean in the context, with the name "messageSource"; otherwise, message

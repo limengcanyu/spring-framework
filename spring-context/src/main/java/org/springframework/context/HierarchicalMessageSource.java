@@ -22,6 +22,8 @@ import org.springframework.lang.Nullable;
  * Sub-interface of MessageSource to be implemented by objects that
  * can resolve messages hierarchically.
  *
+ * MessageSource的子接口，由可以分层解析消息的对象实现。
+ *
  * @author Rod Johnson
  * @author Juergen Hoeller
  */

@@ -22,6 +22,9 @@ package org.springframework.context;
  * <b>NOTE: This interface does not imply specific auto-startup semantics.
  * Consider implementing {@link SmartLifecycle} for that purpose.</b>
  *
+ * 通用接口，定义了用于启动/停止生命周期控制的方法。该接口的一般用例是控制异步处理。
+ * 注意：该接口并未有特殊的自动启动语义。如果有这种需求，考虑实现SmartLifecycle。
+ *
  * <p>Can be implemented by both components (typically a Spring bean defined in a
  * Spring context) and containers  (typically a Spring {@link ApplicationContext}
  * itself). Containers will propagate start/stop signals to all components that

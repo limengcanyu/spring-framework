@@ -23,6 +23,8 @@ import org.springframework.core.metrics.ApplicationStartup;
  * Interface to be implemented by any object that wishes to be notified
  * of the {@link ApplicationStartup} that it runs with.
  *
+ * 希望被ApplicationStartup通知的对象可以实现此接口。
+ *
  * @author Brian Clozel
  * @since 5.3
  * @see ApplicationContextAware

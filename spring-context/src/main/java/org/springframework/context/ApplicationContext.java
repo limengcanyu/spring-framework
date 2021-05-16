@@ -28,6 +28,8 @@ import org.springframework.lang.Nullable;
  * This is read-only while the application is running, but may be
  * reloaded if the implementation supports this.
  *
+ * 提供应用配置的核心接口。在应用运行期间只读，但是如果实现支持的话，可以重新载入。
+ *
  * <p>An ApplicationContext provides:
  * <ul>
  * <li>Bean factory methods for accessing application components.

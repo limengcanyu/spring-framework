@@ -22,8 +22,12 @@ import java.util.function.Consumer;
 /**
  * Interface to be implemented by application event listeners.
  *
+ * 应用事件监听器实现的接口。
+ *
  * <p>Based on the standard {@code java.util.EventListener} interface
  * for the Observer design pattern.
+ *
+ * 基于标准java.util.EventListener接口，使用观察者模式。
  *
  * <p>As of Spring 3.0, an {@code ApplicationListener} can generically declare
  * the event type that it is interested in. When registered with a Spring

@@ -23,6 +23,8 @@ import org.springframework.beans.factory.Aware;
  * of the ApplicationEventPublisher (typically the ApplicationContext)
  * that it runs in.
  *
+ * 希望被ApplicationEventPublisher（通常是ApplicationContext）通知的对象可以实现此接口。
+ *
  * @author Juergen Hoeller
  * @author Chris Beams
  * @since 1.1.1

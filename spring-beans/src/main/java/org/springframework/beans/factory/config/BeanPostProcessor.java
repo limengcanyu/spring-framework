@@ -23,6 +23,8 @@ import org.springframework.lang.Nullable;
  * Factory hook that allows for custom modification of new bean instances &mdash;
  * for example, checking for marker interfaces or wrapping beans with proxies.
  *
+ * 工厂钩子，允许自定义修改新的bean实例；例如，检查标记接口或者使用代理包装bean。
+ *
  * <p>Typically, post-processors that populate beans via marker interfaces
  * or the like will implement {@link #postProcessBeforeInitialization},
  * while post-processors that wrap beans with proxies will normally

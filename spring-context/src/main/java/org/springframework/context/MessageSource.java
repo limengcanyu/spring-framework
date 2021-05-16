@@ -24,6 +24,8 @@ import org.springframework.lang.Nullable;
  * Strategy interface for resolving messages, with support for the parameterization
  * and internationalization of such messages.
  *
+ * 解析消息的策略接口，支持消息的参数化和国际化。
+ *
  * <p>Spring provides two out-of-the-box implementations for production:
  * <ul>
  * <li>{@link org.springframework.context.support.ResourceBundleMessageSource}: built
@@ -31,6 +33,10 @@ import org.springframework.lang.Nullable;
  * <li>{@link org.springframework.context.support.ReloadableResourceBundleMessageSource}:
  * highly configurable, in particular with respect to reloading message definitions.
  * </ul>
+ *
+ * Spring提供了两种开箱即用的实现，用于生产环境：
+ * org.springframework.context.support.ResourceBundleMessageSource
+ * org.springframework.context.support.ReloadableResourceBundleMessageSource
  *
  * @author Rod Johnson
  * @author Juergen Hoeller

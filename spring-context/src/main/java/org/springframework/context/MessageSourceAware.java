@@ -22,9 +22,13 @@ import org.springframework.beans.factory.Aware;
  * Interface to be implemented by any object that wishes to be notified
  * of the MessageSource (typically the ApplicationContext) that it runs in.
  *
+ * 希望收到MessageSource（通常是ApplicationContext）通知的对象可以实现此接口。
+ *
  * <p>Note that the MessageSource can usually also be passed on as bean
  * reference (to arbitrary bean properties or constructor arguments), because
  * it is defined as bean with name "messageSource" in the application context.
+ *
+ * 注意：MessageSource通常也可以被传递为bean引用（对任意bean属性或者构造器参数的引用），因为它在应用上下文中被定义为名称为"messageSource"的bean.
  *
  * @author Juergen Hoeller
  * @author Chris Beams
